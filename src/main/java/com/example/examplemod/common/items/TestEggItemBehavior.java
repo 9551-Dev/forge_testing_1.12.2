@@ -19,6 +19,7 @@ import net.minecraftforge.fml.relauncher.SideOnly;
 
 public class TestEggItemBehavior extends ItemEgg implements IHasModel {
     public TestEggItemBehavior(String name) {
+        this.setUnlocalizedName(name);
         this.setRegistryName(ExampleMod.MODID,name);
         this.setCreativeTab(ExampleMod.tutorial_tab);
 
