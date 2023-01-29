@@ -1,5 +1,6 @@
 package com.example.examplemod.init;
 
+import mcp.MethodsReturnNonnullByDefault;
 import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.item.ItemStack;
 

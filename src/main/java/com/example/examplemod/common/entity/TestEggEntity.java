@@ -1,7 +1,9 @@
 package com.example.examplemod.common.entity;
 
+import net.minecraft.entity.EntityLivingBase;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.entity.projectile.EntityEgg;
+import net.minecraft.item.ItemStack;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.util.math.RayTraceResult;
 import net.minecraft.world.World;
@@ -14,7 +16,8 @@ public class TestEggEntity extends EntityEgg {
     @Override
     protected void onImpact(RayTraceResult rayTraceResult) {
 
-        BlockPos hit = new BlockPos(0,0,0);
+        BlockPos hit = null;
+        EntityLivingBase player = this.getThrower();
 
         if(rayTraceResult.typeOfHit == RayTraceResult.Type.BLOCK) {
             hit = rayTraceResult.getBlockPos();
@@ -22,7 +25,9 @@ public class TestEggEntity extends EntityEgg {
             hit = rayTraceResult.entityHit.getPosition();
         }
 
-        this.world.createExplosion(this.getThrower(), hit.getX(), hit.getY(), hit.getZ(), 5, true);
-        this.setDead();
+        if (hit != null) {
+            this.world.createExplosion(player,hit.getX(), hit.getY(), hit.getZ(), 5, true);
+            this.setDead();
+        }
     }
 }
