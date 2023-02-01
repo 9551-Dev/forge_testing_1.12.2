@@ -1,6 +1,7 @@
 package com.example.examplemod;
 
 import com.example.examplemod.init.ModTab;
+import com.example.examplemod.mixin.MixinEntityItem;
 import com.example.examplemod.proxy.CommonProxy;
 import net.minecraft.creativetab.CreativeTabs;
 import net.minecraftforge.event.entity.player.AdvancementEvent;
