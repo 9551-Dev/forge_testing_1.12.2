@@ -35,6 +35,5 @@ public class RegistryHandler {
                 ((IHasModel) block).register();
             }
         }
-
     }
 }

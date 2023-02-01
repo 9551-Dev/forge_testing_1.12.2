@@ -14,5 +14,4 @@ public class MixinGuiMainMenu extends GuiScreen {
     public void drawText(CallbackInfo ci) {
         mc.fontRenderer.drawStringWithShadow(TextFormatting.RED + "test",1,1,0xFFFFFF);
     }
-
 }
