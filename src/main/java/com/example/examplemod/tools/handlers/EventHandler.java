@@ -1,14 +1,10 @@
 package com.example.examplemod.tools.handlers;
 
-import com.example.examplemod.ExampleMod;
-import net.minecraft.client.Minecraft;
 import net.minecraft.entity.Entity;
 import net.minecraft.entity.EntityLivingBase;
 import net.minecraft.entity.item.EntityItem;
 import net.minecraft.init.Blocks;
-import net.minecraft.init.Items;
 import net.minecraft.item.Item;
-import net.minecraft.item.ItemBlockSpecial;
 import net.minecraft.item.ItemStack;
 import net.minecraft.potion.Potion;
 import net.minecraft.potion.PotionEffect;
@@ -22,6 +18,7 @@ import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.common.eventhandler.SubscribeEvent;
 
 import java.util.List;
+import java.util.Objects;
 
 @Mod.EventBusSubscriber
 public class EventHandler {
@@ -34,9 +31,9 @@ public class EventHandler {
 
         List<PotionEffect> effects = type.getEffects();
         for (PotionEffect i : effects) {
-            if (i.getEffectName() == "effect.moveSlowdown") {
+            if (i.getEffectName().equals("effect.moveSlowdown")) {
                 int amp = i.getAmplifier();
-                player.addPotionEffect(new PotionEffect(Potion.getPotionById(1),i.getDuration(),amp));
+                player.addPotionEffect(new PotionEffect(Objects.requireNonNull(Potion.getPotionById(1)),i.getDuration(),amp));
                 player.removePotionEffect(i.getPotion());
             }
         }

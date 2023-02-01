@@ -3,7 +3,6 @@ package com.example.examplemod.mixin;
 import com.example.examplemod.tools.misc.EntityExplosionPower;
 import com.example.examplemod.tools.misc.EntityExplosionPowerRegister;
 import net.minecraft.entity.item.EntityItem;
-import net.minecraft.init.Blocks;
 import net.minecraft.item.Item;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.world.World;

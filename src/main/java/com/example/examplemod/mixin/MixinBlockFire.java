@@ -5,11 +5,8 @@ import net.minecraft.block.state.IBlockState;
 import net.minecraft.entity.Entity;
 import net.minecraft.entity.item.EntityItem;
 import net.minecraft.entity.player.EntityPlayer;
-import net.minecraft.init.Blocks;
-import net.minecraft.item.Item;
 import net.minecraft.util.math.AxisAlignedBB;
 import net.minecraft.util.math.BlockPos;
-import net.minecraft.util.text.TextComponentString;
 import net.minecraft.world.World;
 import org.spongepowered.asm.mixin.Mixin;
 import org.spongepowered.asm.mixin.injection.At;
@@ -36,7 +33,7 @@ public class MixinBlockFire {
     }
 
     @Inject(method="tickRate",at=@At("TAIL"),cancellable = true)
-    public void tickRate(CallbackInfoReturnable cir) {
+    public void tickRate(CallbackInfoReturnable<Integer> cir) {
         cir.setReturnValue(1);
     }
 }

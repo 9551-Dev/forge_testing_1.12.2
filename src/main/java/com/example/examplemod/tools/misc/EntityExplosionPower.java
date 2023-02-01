@@ -1,7 +1,7 @@
 package com.example.examplemod.tools.misc;
 
 public class EntityExplosionPower {
-    private float power;
+    private final float power;
 
     public EntityExplosionPower(float power) {
         this.power = power;
