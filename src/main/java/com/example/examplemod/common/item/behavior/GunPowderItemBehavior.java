@@ -1,4 +1,4 @@
-package com.example.examplemod.common.items;
+package com.example.examplemod.common.item.behavior;
 
 import com.example.examplemod.ExampleMod;
 import com.example.examplemod.init.ModItems;

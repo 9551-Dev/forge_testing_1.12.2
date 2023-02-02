@@ -1,7 +1,8 @@
 package com.example.examplemod.init;
 
-import com.example.examplemod.common.items.GunPowderItemBehavior;
-import com.example.examplemod.common.items.TestEggItemBehavior;
+import com.example.examplemod.common.item.ItemCopperSoup;
+import com.example.examplemod.common.item.behavior.GunPowderItemBehavior;
+import com.example.examplemod.common.item.behavior.TestEggItemBehavior;
 import com.example.examplemod.tools.ItemBase;
 import net.minecraft.item.Item;
 
@@ -13,4 +14,5 @@ public class ModItems {
     public static final Item TESTITEM = new ItemBase("gae");
     public static final Item TESTEGGITEM = new TestEggItemBehavior("test_egg");
     public static final Item EDIBLEGUNPOWDER = new GunPowderItemBehavior("gunpowder");
+    public static final Item COPPERSOUP = new ItemCopperSoup("copper_soup");
 }
