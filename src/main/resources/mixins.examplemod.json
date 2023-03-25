@@ -10,7 +10,8 @@
     "MixinPotion",
     "MixinBlockFire",
     "MixinItemEnderPearl",
-    "MixinEntityItem"
+    "MixinEntityItem",
+    "MixinEntity"
   ],
   "server": []
 }

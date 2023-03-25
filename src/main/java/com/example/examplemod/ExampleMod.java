@@ -2,6 +2,7 @@ package com.example.examplemod;
 
 import com.example.examplemod.init.ModTab;
 import com.example.examplemod.proxy.CommonProxy;
+import com.example.examplemod.world.TestWorldGen;
 import net.minecraft.creativetab.CreativeTabs;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.common.Mod.EventHandler;
@@ -9,6 +10,7 @@ import net.minecraftforge.fml.common.SidedProxy;
 import net.minecraftforge.fml.common.event.FMLInitializationEvent;
 import net.minecraftforge.fml.common.event.FMLPostInitializationEvent;
 import net.minecraftforge.fml.common.event.FMLPreInitializationEvent;
+import net.minecraftforge.fml.common.registry.GameRegistry;
 import org.apache.logging.log4j.Logger;
 
 @Mod(modid = ExampleMod.MODID, name = ExampleMod.NAME, version = ExampleMod.VERSION)
@@ -34,6 +36,7 @@ public class ExampleMod
 
     @EventHandler
     public static void init(FMLInitializationEvent event) {
+        GameRegistry.registerWorldGenerator(new TestWorldGen(),0);
     }
 
     @EventHandler
